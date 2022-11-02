@@ -1,0 +1,1 @@
+> use serverTimeStamps so all users have the same reference frame no matter where they are (different places => different timezones and stuff)
