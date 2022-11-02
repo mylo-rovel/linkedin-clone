@@ -1,35 +1,34 @@
-# How to use and deploy this clone-app ------------------------------
-1st Create a new project at Firebase webapp
-2nd Copy and paste Firebase SDK snippet Config
-3rd Create "firebase.js" at /src directory and write:
+## How to use and deploy this clone-app
+1st Create a new project at Firebase webapp<br>
+2nd Copy and paste Firebase SDK snippet Config<br>
+3rd Create "firebase.js" at /src/ directory and write:<br>
 
-//* -----------------------------------------------------------------
-// firebase.js :
-// TODO: Add SDKs for Firebase products that you want to use
-// Import the functions you need from the SDKs you need
-// https://firebase.google.com/docs/web/setup#available-libraries
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+    //* -----------------------------------------------------------------
+    // firebase.js :
+    // Import the functions you need from the SDKs you need: https://firebase.google.com/docs/web/setup#available-libraries
 
-const firebaseConfig = {
-    the actual content of the copied object (Firebase SDK snippet Config)
-};
+    import firebase from 'firebase/compat/app';
+    import 'firebase/compat/auth';
+    import 'firebase/compat/firestore';
 
-// Use this to initialize the firebase App
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+    const firebaseConfig = {
+        the actual content of the copied object (Firebase SDK snippet Config)
+    };
 
-// Use these for db & auth
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
+    // Use this to initialize the firebase App
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export { auth, db };
+    // Use these for db & auth
+    const db = firebaseApp.firestore();
 
-//* -----------------------------------------------------------------
+    const auth = firebase.auth();
+    export { auth, db };
+
+    //* -----------------------------------------------------------------
 4th Run $npm install
 
-# DEPLOYMENT? -------------------------------------------------------
-=> 1st run $npm run build
-=> 2nd run $firebase login
-=> 3rd run $firebase init
-=> 4th run $firebase deploy
+## DEPLOYMENT?
+=> 1st run $npm run build <br>
+=> 2nd run $firebase login <br>
+=> 3rd run $firebase init <br>
+=> 4th run $firebase deploy <br>
